@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>星辰字体婚礼设计展示</title>
+</head>
+
+<body>
+    <!-- 背景星星Canvas -->
+    <canvas id="starCanvas"></canvas>
+
+    <!-- 页面主要内容 -->
+    <div class="content">
+        <header>
+            <h1 class="main-title">星辰字体婚礼设计展示</h1>
+        </header>
+
+        <!-- 动图和爱心按钮容器 -->
+        <div class="gif-and-button-container">
+            <div class="gif-container">
+                <video src="字体动图.mp4" autoplay loop muted class="wedding-animation"></video>
+            </div>
+            <a href="newPage.html" class="heart-button" title="点击跳转到新页面"></a>
+        </div>
+
+        <!-- 新人名字输入板块 -->
+        <div class="name-input-area">
+            <input type="text" id="name1" class="name-input" placeholder="新人A名字">
+            <input type="text" id="name2" class="name-input" placeholder="新人B名字">
+            <button id="generateFont" class="generate-button">生成星辰体</button>
+        </div>
+
+        <!-- 动态输出 -->
+        <p id="outputText" class="output-text"></p>
+    </div>
+
+    <!-- 脚本 -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>
+
+
+</html>

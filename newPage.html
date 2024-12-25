@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP4 动图展示</title>
+    <style>
+        /* 设置整个页面的布局 */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        /* 视频容器的样式 */
+        .video-container {
+            width: 90%;
+            /* 容器的宽度随浏览器窗口宽度动态变化 */
+            max-width: 800px;
+            /* 设置最大宽度 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* 添加阴影 */
+        }
+
+        /* 视频样式 */
+        video {
+            width: 100%;
+            height: auto;
+            max-height: 80vh;
+            /* 限制最大高度，防止视频过大 */
+            object-fit: contain;
+            /* 保持视频比例 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="video-container">
+        <!-- 嵌入 MP4 视频 -->
+        <video controls autoplay loop>
+            <source src="合体字.mp4" type="video/mp4">
+            您的浏览器不支持 MP4 格式的视频。
+        </video>
+    </div>
+</body>
+
+</html>

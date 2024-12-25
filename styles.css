@@ -1,0 +1,131 @@
+/* 全局样式 */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+    /* 粉色渐变背景 */
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+/* 背景 Canvas */
+#starCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* 确保在最底层 */
+}
+
+/* 主体内容 */
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.main-title {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* 动图和按钮容器 */
+.gif-and-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* 动图容器 */
+.gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wedding-animation {
+    width: 50%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+/* 根据浏览器宽度调整动图大小 */
+@media screen and (max-width: 768px) {
+    .wedding-animation {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .wedding-animation {
+        width: 90%;
+    }
+}
+
+/* 爱心按钮 */
+.heart-button {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    /* 保持与动图的距离 */
+    background: url('heart.png') no-repeat center center;
+    background-size: contain;
+    animation: heart-beat 1.5s infinite;
+    cursor: pointer;
+}
+
+@keyframes heart-beat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* 名字输入框与按钮 */
+.name-input-area {
+    margin-top: 20px;
+}
+
+.name-input {
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.generate-button {
+    padding: 10px 20px;
+    background-color: #ff6f91;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.generate-button:hover {
+    background-color: #ff3e70;
+}
+
+/* 动态输出文字 */
+.output-text {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 1.2rem;
+}
